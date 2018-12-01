@@ -82,16 +82,22 @@ pc4.test.results = pc4[-training,3]
 ##Model with Opioids as response variable
 pc4.lr <- glm(Opioid.P ~ ., family=binomial(link='logit'),data=pc4[training,])
 
-#Model Output
+#Model1 Output
 summary(pc4.lr)
+AIC(pc4.lr) #Akaike's Information Criteria. Penalizes the includion of additional models to the variables by increasing the error
+BIC(pc4.lr) #Bayesian Informati0n Criteria. A variant of AIC that issue stronger penalties for introducing additional of variables
+            #to the model
 
 
 #-----------------------------------------------------------------------------------
 ##Model with Opioid.Prescriber as response variable
 #pc4.lr <- glm(Opioid.P ~ ., family=binomial(link='logit'),data=pc4[training,])
 
-#Model Output
+#Model2 Output
 #summary(pc4.lr)
+AIC(pc4.lr) #Akaike's Information Criteria. Penalizes the includion of additional models to the variables by increasing the error
+BIC(pc4.lr) #Bayesian Informati0n Criteria. A variant of AIC that issue stronger penalties for introducing additional of variables
+            #to the model
 #-----------------------------------------------------------------------------------
 
 #Obtain the probabilities of each variable in the test set having the response variable
