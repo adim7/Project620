@@ -31,7 +31,7 @@ head(PrC1, n = 5)
 
 #Export PrC to excel to filter and categorize 'States' variable by Regions & Specialty by Credentials
 library("csv")
-export.PrC <- write.csv(PrC, "/Users/AdimKris/Desktop/R/PrC")
+export.PrC <- write.csv(PrC, "/Users/AdimKris/Desktop/R/PrC")#You can insert your own working directory here in the ".../filename"
 PrC2 <- read.csv("https://raw.githubusercontent.com/adim7/Project620/master/PrC_.csv")
 head(PrC2, n =5)
 
@@ -84,5 +84,5 @@ head(PrC5)
 dim(PrC5)
 
 #Export cleaned version (categorical variables) to csv for folder model building and analysis
-write.csv(PrC5, "/Users/AdimKris/Desktop/R/PrC5")
+write.csv(PrC5, "/Users/AdimKris/Desktop/R/PrC5")#You can insert your own working directory here in the ".../filename"
 
